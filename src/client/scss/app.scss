@@ -1,0 +1,393 @@
+$theme-colors: (
+    "primary": #0091ea
+);
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+//default Font Style
+* {
+    font-family: "Handlee", cursive;
+    font-weight: bold !important;
+}
+
+//navbar
+.navbar {
+    justify-content: space-around;
+    background-color: none;
+    color: #dbf6e9;
+    font-size: larger;
+
+    &:hover {
+        border-radius: 3px;
+        transition: 0.3s;
+        box-shadow: 0px 0px 0px rgb(39, 39, 39);
+        background-color: none;
+    }
+}
+
+.nav-link {
+    color: #dbf6e9;
+
+    &:hover {
+        color: #dbf6e9;
+        text-decoration: none;
+        transition: 0.1s;
+        font-size: 20px;
+        text-shadow: #fc0 1px 0 10px;
+    }
+}
+
+.streak-text:hover {
+    transition: 0.1s;
+    font-size: 20px;
+    cursor: default;
+    text-shadow: rgb(255, 0, 21) 1px 0 10px;
+}
+//end of navbar
+
+//footer
+.footer {
+    background-color: #27276e;
+    color: #dbf6e9;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    opacity: 0;
+    z-index: 1;
+
+    &:hover {
+        z-index: 3;
+        opacity: 1;
+        transition: 0.7s;
+        box-shadow: 0px 0px 15px rgb(39, 39, 39);
+        background-color: #31326f;
+    }
+}
+
+.footer-logo:hover {
+    transition: 0.7s;
+    box-shadow: 8px 8px 15px rgb(39, 39, 39);
+    border-radius: 90px 90px;
+    background-color: #383980;
+}
+
+.linkedin:hover {
+    transition: 0.7s;
+    box-shadow: 8px 8px 15px rgb(39, 39, 39);
+    border-radius: 12px 12px;
+    background-color: #383980;
+}
+
+.facebook:hover {
+    transition: 0.7s;
+    box-shadow: 8px 8px 15px rgb(39, 39, 39);
+    border-radius: 12px 12px;
+    background-color: #383980;
+}
+
+.twitter:hover {
+    transition: 0.7s;
+    box-shadow: 8px 8px 15px rgb(39, 39, 39);
+    border-radius: 90px 90px;
+    background-color: #383980;
+}
+
+.instagram:hover {
+    transition: 0.7s;
+    box-shadow: 8px 8px 15px rgb(39, 39, 39);
+    border-radius: 12px 12px;
+    background-color: #383980;
+}
+
+.affirmly-div:hover {
+    transition: 0.7s;
+    box-shadow: 8px 8px 15px rgb(39, 39, 39);
+    border-radius: 15px 15px;
+    background-color: #383980;
+}
+
+.inc {
+    font-family: "Merienda", cursive;
+    color: #00ccff;
+}
+
+//end of footer
+
+//title font color
+.title {
+    color: #31326f;
+}
+//end of title font color
+
+//table task level color
+.level-1 {
+    background-color: #f1ffab;
+}
+
+.level-2 {
+    background-color: #ffd98e;
+}
+
+.level-3 {
+    background-color: #ffc93c;
+}
+// end of table task
+body {
+    background-color: #dbf6e9;
+    // background-image: linear-gradient(to bottom right, turquoise, yellow);
+    background-image: linear-gradient(to bottom right, rgb(64, 173, 224), lightgreen);
+}
+
+//Tasks table
+.tasks-div {
+    background-color: #c4d8ce;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgb(39, 39, 39);
+    z-index: 2;
+
+    &:hover {
+        box-shadow: 8px 8px 15px rgb(39, 39, 39);
+        transition: 0.3s;
+    }
+}
+
+//End of tasks table
+
+.checkbox {
+    background-color: #31326f;
+}
+//card for trophies and login
+.card {
+    background-color: #9ddfd3;
+
+
+}
+
+.link {
+    color: #dbf6e9;
+font-size: larger;
+
+
+    box-shadow: 0px 0px 5px rgb(39, 39, 39);
+
+    &:hover {
+        box-shadow: 8px 8px 15px rgb(39, 39, 39);
+        transition: 0.3s;
+    }
+}
+
+.login-btn {
+    background-color: #31326f;
+    color: #dbf6e9;
+}
+.login-btn:hover {
+    background-color: #31326f;
+    color: #dbf6e9;
+}
+
+// #Region "About Affirmly" Pop-Up on Login Page
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+// #EndRegion "About Affirmly" Pop-Up on Login Page
+
+//#Region for toast
+#toast-container-main {
+    position: fixed;
+    top: 120px;
+    right: 50px;
+    z-index: 9999999;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+#toast-container-main > div {
+    // background-color: rgba(0, 0, 0, 0.15);
+    background-color: #ffc93c;
+    color: black;
+    width: 100%;
+    margin-bottom: 10px;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+    animation: slide-in 0.2s;
+    transition: all 0.3s ease;
+}
+
+.toast-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+button {
+    background: none;
+    border: none;
+    color: black;
+    font-weight: 900;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+//#EndRegion for toast css
+
+//#Region NewTask & EditTask form
+.newtask_form {
+    border: 2px solid #31326f ;
+background-color: #9ddfd3;
+}
+.newtask_form input {
+    height: 35px;
+    border: 2px solid #31326f ;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    transition: 0.2s;
+}
+.newtask_form input:hover {
+    border: 2px solid #ffc93c;
+    
+}
+
+.newtask_form input::placeholder {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.newtask_form textarea {
+    height: 150px;
+    border: 2px solid #31326f ;
+
+    resize: none;
+    padding-left: 5px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.newtask_form textarea::placeholder {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.newtask_form textarea:hover {
+    // border: 2px solid #ff8080;
+    border: 2px solid #ffc93c;
+
+}
+.newtask_form input[type="submit"] {
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    background: #631ebc;
+    text-transform: uppercase;
+    width: 50%;
+    transition: 0.2s;
+}
+.newtask_form input[type="submit"]:hover {
+    font-size: 16px;
+    border: 0;
+}
+
+#exampleCheck1 {
+    // background-color: white;
+    border-color: #0091ea;
+    height: 15px;
+}
+// .todo-button {
+//     background-color: #f0ad4e;
+//     color: white;
+// }
+
+.edit-btn {
+    background-color: #f0ad4e;
+    margin-right: 1em;
+}
+
+.delete-btn {
+    background-color: #d9534f;
+}
+
+//#EndRegion of NewTask & EditTask form
